@@ -45,12 +45,13 @@
     $(function () {
         $button.click(function () {
             var randomId = 100 + ~~(Math.random() * 100);
-            $table.bootstrapTable('updateByUniqueId', {
-                id: 3,
-                row: {
+            var row = {
                     name: 'Item ' + randomId,
                     price: '$' + randomId
-                }
+                };
+            $table.bootstrapTable('updateByUniqueId', {
+                id: 3,
+                row: row
             });
         });
     });
